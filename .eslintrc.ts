@@ -1,0 +1,35 @@
+module.exports = {
+  root: true,
+  env: { browser: true, node: true, jasmine: true, jest: true, es6: true },
+  plugins: ['react', 'react-hooks'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  rules: {
+    'object-curly-newline': 'off',
+    'object-shorthand': [2, 'always'],
+    'array-bracket-spacing': [2, 'never'],
+    'consistent-return': 0,
+    'implicit-arrow-linebreak': 'off',
+    'function-paren-newline': 'off',
+    'react/jsx-one-expression-per-line': 'off',
+    'react/no-unescaped-entities': 'off',
+    'react/no-array-index-key': 'off',
+    'react-hooks/rules-of-hooks': 'warn',
+    'react-hooks/exhaustive-deps': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'max-len': [
+      2,
+      119,
+      {
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreComments: true,
+      },
+    ],
+  },
+}
