@@ -1,8 +1,8 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Home from './pages/Home'
-import NewRoom from './pages/NewRoom'
 import Providers from './providers'
+
+import { Home, NewRoom, Room } from './pages'
 
 // -----------------------------------
 
@@ -13,6 +13,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/rooms/new' component={NewRoom} />
+          <Route exact path='/rooms/:id' component={Room} />
         </Switch>
       </Providers>
     </BrowserRouter>
