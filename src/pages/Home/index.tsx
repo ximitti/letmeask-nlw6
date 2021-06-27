@@ -25,8 +25,6 @@ export default function Home() {
   const { user, signInWithGoogle } = useAuth()
   const [roomCode, setRoomCode] = useState('')
 
-  console.log(user)
-
   async function handleCreateRoom() {
     if (!user) {
       await signInWithGoogle()
@@ -46,6 +44,11 @@ export default function Home() {
 
     if (!roomRef.exists()) {
       alert('Room does not exits')
+      return
+    }
+
+    if (roomRef.val().endedAt) {
+      alert('Room already closed')
       return
     }
 

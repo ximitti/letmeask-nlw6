@@ -1,8 +1,11 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+//hooks
+import { BrowserRouter } from 'react-router-dom'
 
+// providers
 import Providers from './providers'
 
-import { Home, NewRoom, Room } from './pages'
+// routes
+import Routes from './routes'
 
 // -----------------------------------
 
@@ -10,11 +13,7 @@ function App() {
   return (
     <BrowserRouter>
       <Providers>
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/rooms/new' component={NewRoom} />
-          <Route exact path='/rooms/:id' component={Room} />
-        </Switch>
+        <Routes />
       </Providers>
     </BrowserRouter>
   )

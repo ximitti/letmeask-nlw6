@@ -1,4 +1,7 @@
+// hooks
 import { ReactNode } from 'react'
+
+// providers
 import { AuthProvider } from './Auth'
 
 // --------------------------------------

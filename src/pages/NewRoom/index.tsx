@@ -1,15 +1,19 @@
+// hooks
 import { FormEvent, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-
 import useAuth from '../../hooks/useAuth'
 
+// components
 import Button from '../../components/Button'
 
+// services
 import { database } from '../../services/firebase'
 
+// images
 import illustrationImg from '../../assets/images/illustration.svg'
 import logoImg from '../../assets/images/logo.svg'
 
+// styles
 import '../../styles/auth.scss'
 
 // ------------------------------------------------

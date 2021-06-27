@@ -1,11 +1,7 @@
-import {
-  createContext,
-  ReactNode,
-  useContext,
-  useEffect,
-  useState,
-} from 'react'
+// hooks
+import { createContext, ReactNode, useEffect, useState } from 'react'
 
+// services
 import { firebase, auth } from '../../services/firebase'
 
 // -------------------------------------------
