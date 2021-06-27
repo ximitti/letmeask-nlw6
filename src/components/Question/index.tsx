@@ -1,5 +1,6 @@
 // hooks
 import { ReactNode } from 'react'
+import cx from 'classnames'
 
 // styles
 import '../../styles/question.scss'
@@ -13,13 +14,27 @@ interface QuestionProps {
     name: string
     avatar: string
   }
+  isAnswered?: boolean
+  isHighlighted?: boolean
 }
 
 // --------------------------------
 
-export default function Question({ children, content, author }: QuestionProps) {
+export default function Question({
+  children,
+  content,
+  author,
+  isAnswered = false,
+  isHighlighted = false,
+}: QuestionProps) {
   return (
-    <div className='question'>
+    <div
+      className={cx(
+        'question',
+        { answered: isAnswered },
+        { highlighted: isHighlighted && !isAnswered }
+      )}
+    >
       <p>{content}</p>
       <footer>
         <div className='user-info'>
